@@ -3,10 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>My Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .about {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub.io Website!</h1>
-    <p>This is my personal website hosted on GitHub Pages.</p>
+
+    <!-- About Me Section -->
+    <section class="about">
+        <h1>Francis Northwood</h1>
+        <p>I'm a writer interested in finance, food, and architecture.</p>
+    </section>
+
+    <!-- Essays Section -->
+    <h2>My Writing</h2>
+    <ul id="essay-list">
+        <!-- Essays will be added here -->
+    </ul>
+
+    <script>
+        // Array of essays (Chronologically Ordered: Most Recent First)
+        const essays = [
+            { title: "Unsafe Bets", url: "https://thebaffler.com/latest/unsafe-bets-northwood", date: "2023-11-04" },
+            { title: "At this Michelin-starred restaurant Bay Area restaurant, the food is local. The funding is more complicated", url: "https://example.com/older", date: "2023-11-15" },
+         
+        ];
+
+        // Get the essay list container
+        const essayList = document.getElementById("essay-list");
+
+        // Generate the list of essays
+        essays.forEach(essay => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `<a href="${essay.url}" target="_blank">${essay.title}</a> - <small>${essay.date}</small>`;
+            essayList.appendChild(listItem);
+        });
+    </script>
+
 </body>
 </html>
