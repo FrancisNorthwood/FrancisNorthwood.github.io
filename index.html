@@ -45,32 +45,11 @@
 <body>
     <!-- About Me Section -->
     <p class="name">Francis Northwood</p>
-    <p>I'm a writer interested in finance, food, and architecture. I can be reached at <a href="mailto:francis.northwood@gmail.com">francis.northwood@gmail.com</a></p>
+    <p>I'm a writer interested in finance, food, and architecture. I can be reached at <a href="mailto:francis.northwood@gmail.com">francis.northwood@gmail.com</a>.</p>
     <!-- Essays Section -->
-    <ul id="essay-list">
-        <!-- Essays will be added here -->
+    <ul>
+        <li><a href="https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php" target="_blank">"At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated,"</a> <em>San Francisco Chronicle</em>, Nov. 15, 2023</li>
+        <li><a href="https://thebaffler.com/latest/unsafe-bets-northwood" target="_blank">"Unsafe Bets,"</a> <em>The Baffler</em>, Nov. 4, 2023</li>
     </ul>
-    <script>
-        // Function to format dates (YYYY-MM-DD to "Mon. D, YYYY")
-        function formatDate(isoDate) {
-            const dateObj = new Date(isoDate);
-            const options = { year: 'numeric', month: 'short', day: 'numeric' };
-            let formattedDate = dateObj.toLocaleDateString('en-US', options);
-            return formattedDate.replace(/^(\w{3}) /, "$1. "); // Adds a period after the month abbreviation
-        }
-        // Array of essays (Chronologically Ordered: Most Recent First)
-        const essays = [
-            { title: ""Unsafe Bets,"", publication: "The Baffler", url: "https://thebaffler.com/latest/unsafe-bets-northwood", date: "2023-11-04" },
-            { title: ""At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated,"", publication: "San Francisco Chronicle", url: "https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php", date: "2023-11-15" },
-        ];
-        // Get the essay list container
-        const essayList = document.getElementById("essay-list");
-        // Generate the list of essays
-        essays.forEach(essay => {
-            const listItem = document.createElement("li");
-            listItem.innerHTML = `<a href="${essay.url}" target="_blank">${essay.title}</a> <em>${essay.publication}</em>, ${formatDate(essay.date)}`;
-            essayList.appendChild(listItem);
-        });
-    </script>
 </body>
 </html>
