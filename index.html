@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Francis Northwood</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Charter&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Charter", serif;
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
             line-height: 1.6;
         }
-        h1, h2 {
+        h1 {
             text-align: center;
-        }
-        .about {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-radius: 5px;
         }
         ul {
             list-style-type: none;
@@ -40,13 +37,10 @@
 <body>
 
     <!-- About Me Section -->
-    <section class="about">
-        <h1>Francis Northwood</h1>
-        <p>I'm a writer interested in finance, food, and architecture.</p>
-    </section>
+    <h1>Francis Northwood</h1>
+    <p>I'm a writer interested in finance, food, and architecture.</p>
 
     <!-- Essays Section -->
-    <h2>My Writing</h2>
     <ul id="essay-list">
         <!-- Essays will be added here -->
     </ul>
@@ -54,8 +48,8 @@
     <script>
         // Array of essays (Chronologically Ordered: Most Recent First)
         const essays = [
-            { title: "Unsafe Bets", publication: "The Baffler", url: "https://thebaffler.com/latest/unsafe-bets-northwood", date: "2023-11-04" },
-            { title: "At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated", publication: "San Francisco Chronicle", url: "https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php", date: "2023-11-15" },
+            { title: "“Unsafe Bets”", publication: "The Baffler", url: "https://thebaffler.com/latest/unsafe-bets-northwood", date: "2023-11-04" },
+            { title: "“At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated”", publication: "San Francisco Chronicle", url: "https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php", date: "2023-11-15" },
         ];
 
         // Get the essay list container
