@@ -6,27 +6,28 @@
     <title>Francis Northwood</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Charter&display=swap');
-
         body {
             font-family: "Charter", serif;
             max-width: 800px;
-            margin: 40px auto;
+            margin: 40px;
             padding: 20px;
             line-height: 1.6;
-            background-color: #ffffff; /* White background */
-            color: #333; /* Dark gray text for readability */
+            background-color: #ffffff;
+            color: #333;
+            font-size: 16px; /* Standardized font size */
         }
         .name {
             font-weight: bold;
             margin-bottom: 5px;
+            font-size: 16px; /* Matching font size */
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         li {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
+            padding: 10px 0; /* Removed side padding */
+            font-size: 16px; /* Matching font size */
         }
         a {
             text-decoration: none;
@@ -35,27 +36,22 @@
         a:hover {
             text-decoration: underline;
         }
-        hr {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px 0;
+        em {
+            font-size: 16px; /* Matching font size */
+        }
+        .email {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-
     <!-- About Me Section -->
     <p class="name">Francis Northwood</p>
-    <p>I'm a writer interested in finance, food, and architecture.</p>
-
-    <!-- Separator Line -->
-    <hr>
-
+    <p>I'm a writer interested in finance, food, and architecture. I can be reached at <a href="mailto:francis.northwood@gmail.com">francis.northwood@gmail.com</a></p>
     <!-- Essays Section -->
     <ul id="essay-list">
         <!-- Essays will be added here -->
     </ul>
-
     <script>
         // Function to format dates (YYYY-MM-DD to "Mon. D, YYYY")
         function formatDate(isoDate) {
@@ -64,16 +60,13 @@
             let formattedDate = dateObj.toLocaleDateString('en-US', options);
             return formattedDate.replace(/^(\w{3}) /, "$1. "); // Adds a period after the month abbreviation
         }
-
         // Array of essays (Chronologically Ordered: Most Recent First)
         const essays = [
-            { title: "“Unsafe Bets,”", publication: "The Baffler", url: "https://thebaffler.com/latest/unsafe-bets-northwood", date: "2023-11-04" },
-            { title: "“At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated,”", publication: "San Francisco Chronicle", url: "https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php", date: "2023-11-15" },
+            { title: ""Unsafe Bets,"", publication: "The Baffler", url: "https://thebaffler.com/latest/unsafe-bets-northwood", date: "2023-11-04" },
+            { title: ""At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated,"", publication: "San Francisco Chronicle", url: "https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php", date: "2023-11-15" },
         ];
-
         // Get the essay list container
         const essayList = document.getElementById("essay-list");
-
         // Generate the list of essays
         essays.forEach(essay => {
             const listItem = document.createElement("li");
@@ -81,6 +74,5 @@
             essayList.appendChild(listItem);
         });
     </script>
-
 </body>
 </html>
