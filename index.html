@@ -46,10 +46,17 @@
     </ul>
 
     <script>
+        // Function to format dates (YYYY-MM-DD to "Mon D, YYYY")
+        function formatDate(isoDate) {
+            const dateObj = new Date(isoDate);
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return dateObj.toLocaleDateString('en-US', options);
+        }
+
         // Array of essays (Chronologically Ordered: Most Recent First)
         const essays = [
-            { title: "“Unsafe Bets”", publication: "The Baffler", url: "https://thebaffler.com/latest/unsafe-bets-northwood", date: "2023-11-04" },
-            { title: "“At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated”", publication: "San Francisco Chronicle", url: "https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php", date: "2023-11-15" },
+            { title: "“Unsafe Bets,”", publication: "The Baffler", url: "https://thebaffler.com/latest/unsafe-bets-northwood", date: "2023-11-04" },
+            { title: "“At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated,”", publication: "San Francisco Chronicle", url: "https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php", date: "2023-11-15" },
         ];
 
         // Get the essay list container
@@ -58,7 +65,7 @@
         // Generate the list of essays
         essays.forEach(essay => {
             const listItem = document.createElement("li");
-            listItem.innerHTML = `<a href="${essay.url}" target="_blank">${essay.title}</a> <em>${essay.publication}</em> - <small>${essay.date}</small>`;
+            listItem.innerHTML = `<a href="${essay.url}" target="_blank">${essay.title}</a> <em>${essay.publication}</em>, ${formatDate(essay.date)}`;
             essayList.appendChild(listItem);
         });
     </script>
