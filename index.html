@@ -7,19 +7,20 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Charter&display=swap');
         body {
-            font-family: "Charter", serif;
+            font-family: "Charter", "Georgia", serif;
+            max-width: 90%;
             max-width: 800px;
-            margin: 40px;
+            margin: 40px auto;
             padding: 20px;
-            line-height: 1.6;
+            line-height: 1.8;
             background-color: #ffffff;
             color: #333;
-            font-size: 16px;
+            font-size: 18px;
         }
-        .name {
-            margin-bottom: 5px;
-            font-size: 16px;
-            font-weight: bold; /* Option 2: Add this line */
+        h1 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
         }
         ul {
             list-style-type: none;
@@ -28,7 +29,7 @@
         }
         li {
             padding: 10px 0;
-            font-size: 16px;
+            font-size: 18px;
         }
         a {
             text-decoration: none;
@@ -38,14 +39,18 @@
             text-decoration: underline;
         }
         em {
-            font-size: 16px;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
     <!-- About Me Section -->
-    <p class="name"><strong>Francis Northwood</strong></p> <!-- Option 1: Use <strong> tag -->
-    <p>I'm a writer interested in finance, food, and architecture. I can be reached at <a href="mailto:francis.northwood@gmail.com">francis.northwood@gmail.com</a>.</p>
+    <h1>Francis Northwood</h1>
+    <p>I'm a writer interested in finance, food, and architecture. I can be reached at <a href="mailto:francis.northwood@gmail.com" aria-label="Email Francis Northwood">francis.northwood@gmail.com</a>.</p>
+    
+    <!-- Work Section -->
+    <h1>Work</h1>
+    
     <!-- Essays Section -->
     <ul>
         <li><a href="https://thebaffler.com/latest/unsafe-bets-northwood" target="_blank">"Unsafe Bets,"</a> <em>The Baffler</em>, Nov. 4, 2024</li>
