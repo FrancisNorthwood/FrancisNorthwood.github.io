@@ -17,6 +17,8 @@
             color: #333;
             font-size: 18px;
             position: relative;
+            text-align: left;
+            padding-left: 100px;
         }
         
         body::before {
@@ -64,6 +66,15 @@
             body {
                 background: url('C357B4F8-82EB-4380-9FB3-114680E24482_1_105_c.jpeg') no-repeat center center fixed;
                 background-size: cover;
+                text-align: left;
+                padding-left: 100px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+            body {
+                text-align: center;
+                padding-left: 0;
             }
         }
     </style>
