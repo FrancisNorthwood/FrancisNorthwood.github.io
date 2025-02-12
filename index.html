@@ -6,13 +6,14 @@
     <title>Francis Northwood</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Charter&display=swap');
+        
         body {
             font-family: "Charter", "Georgia", serif;
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
             line-height: 1.6;
-            background: url('A299C64B-21D7-4265-902C-3AD48206C012_1_105_c.jpeg') no-repeat center center fixed;
+            background: url('/assets/images/background-desktop.jpeg') no-repeat center center fixed;
             background-size: cover;
             color: #333;
             font-size: 18px;
@@ -62,15 +63,17 @@
             font-size: 18px;
         }
         
+        /* Landscape mode for mobile */
         @media screen and (max-width: 768px) and (orientation: landscape) {
             body {
-                background: url('C357B4F8-82EB-4380-9FB3-114680E24482_1_105_c.jpeg') no-repeat center center fixed;
+                background: url('/assets/images/background-landscape.jpeg') no-repeat center center fixed;
                 background-size: cover;
                 text-align: left;
                 padding-left: 100px;
             }
         }
         
+        /* Portrait mode for mobile */
         @media screen and (max-width: 768px) and (orientation: portrait) {
             body {
                 text-align: center;
