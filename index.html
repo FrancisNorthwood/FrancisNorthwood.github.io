@@ -5,31 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francis Northwood</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Charter&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cooper+Hewitt:wght@400;700&display=swap');
         body {
-            font-family: "Charter", "Georgia", serif;
+            font-family: "Cooper Hewitt", sans-serif;
             max-width: 800px;
-            margin: 40px auto;
+            margin: 40px;
             padding: 20px;
             line-height: 1.6;
-            background: url('assets/images/background-landscape.jpeg') no-repeat center center fixed;
-            background-size: cover;
             color: #333;
             font-size: 18px;
             position: relative;
             text-align: left;
-            padding-left: 100px;
-        }
-        
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.2); /* Increased transparency */
-            z-index: -1;
         }
         
         h1 {
@@ -62,21 +48,10 @@
             font-size: 18px;
         }
         
-        @media screen and (max-width: 768px) and (orientation: landscape) {
+        @media screen and (max-width: 768px) {
             body {
-                background: url('assets/images/background-landscape.jpeg') no-repeat center center fixed;
-                background-size: cover;
-                text-align: left;
-                padding-left: 100px;
-            }
-        }
-        
-        @media screen and (max-width: 768px) and (orientation: portrait) {
-            body {
-                background: url('assets/images/background-desktop.jpeg') no-repeat center center fixed;
-                background-size: cover;
-                text-align: center;
-                padding-left: 0;
+                margin: 20px;
+                padding: 10px;
             }
         }
     </style>
