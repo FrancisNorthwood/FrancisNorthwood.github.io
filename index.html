@@ -9,51 +9,74 @@
         body {
             font-family: "Charter", "Georgia", serif;
             max-width: 800px;
-            margin: 40px 20px;
+            margin: 40px auto;
             padding: 20px;
             line-height: 1.6;
-            background-color: #ffffff;
+            background: url('A299C64B-21D7-4265-902C-3AD48206C012_1_105_c.jpeg') no-repeat center center fixed;
+            background-size: cover;
             color: #333;
             font-size: 18px;
+            position: relative;
         }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.4); /* 60% transparency */
+            z-index: -1;
+        }
+        
         h1 {
             margin-bottom: 15px;
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
         }
+        
         ul {
             list-style-type: none;
             padding: 0;
             margin-top: 15px;
         }
+        
         li {
             padding: 8px 0;
             font-size: 18px;
         }
+        
         a {
             text-decoration: none;
             color: #0073e6;
         }
+        
         a:hover {
             text-decoration: underline;
         }
+        
         em {
             font-size: 18px;
+        }
+        
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+            body {
+                background: url('C357B4F8-82EB-4380-9FB3-114680E24482_1_105_c.jpeg') no-repeat center center fixed;
+                background-size: cover;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- About Me Section -->
     <h1>Francis Northwood</h1>
     <p>I'm a writer interested in finance, food, and architecture. I can be reached at <a href="mailto:francis.northwood@gmail.com" aria-label="Email Francis Northwood">francis.northwood@gmail.com</a>.</p>
     
-    <!-- Work Section -->
     <h1>Work</h1>
     
-    <!-- Essays Section -->
     <ul>
-        <li><a href="https://thebaffler.com/latest/unsafe-bets-northwood" target="_blank">"Unsafe Bets,"</a> <em>The Baffler</em>, Nov. 4, 2024</li>
-        <li><a href="https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php" target="_blank">"At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated,"</a> <em>San Francisco Chronicle</em>, Nov. 15, 2023</li>
+        <li><a href="https://thebaffler.com/latest/unsafe-bets-northwood" target="_blank" rel="noopener noreferrer">"Unsafe Bets,"</a> <em>The Baffler</em>, Nov. 4, 2024</li>
+        <li><a href="https://www.sfchronicle.com/food/restaurants/article/singlethread-funding-healdsburg-18257772.php" target="_blank" rel="noopener noreferrer">"At this Michelin-starred Bay Area restaurant, the food is local. The funding is more complicated,"</a> <em>San Francisco Chronicle</em>, Nov. 15, 2023</li>
     </ul>
 </body>
 </html>
