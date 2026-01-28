@@ -11,9 +11,10 @@
             margin: 40px auto;
             padding: 20px;
             background-color: #fff;
-            color: #333;
+            color: #000;
             line-height: 1.6;
             letter-spacing: 0.03em;
+            position: relative;
         }
         h1 {
             font-size: 1.4em;
@@ -33,11 +34,11 @@
             margin-bottom: 14px;
         }
         a {
-            color: #333;
+            color: #000;
             text-decoration: underline;
         }
         a:visited {
-            color: #333;
+            color: #000;
         }
         a:hover {
             text-decoration: none;
@@ -49,6 +50,22 @@
             margin-top: 40px;
             font-size: 0.9em;
         }
+        .photo {
+            position: fixed;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 180px;
+        }
+        .photo img {
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 900px) {
+            .photo {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -58,7 +75,7 @@
     <ul>
         <li>
             "<a href="#">Some Assembly Required</a>"<br>
-            <span class="outlet">The New York Review of Architecture</span>
+            <span class="outlet">The New York Review of Architecture</span> (Issue 46/47)
         </li>
         <li>
             "<a href="#">The Rise and Fall of a Pedophile Hunter</a>"<br>
@@ -84,6 +101,10 @@
 
     <div class="contact">
         francis.northwood@gmail.com
+    </div>
+
+    <div class="photo">
+        <img src="photo.jpg" alt="">
     </div>
 </body>
 </html>
